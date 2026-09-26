@@ -64,7 +64,11 @@ Then open the address the dev server prints (usually http://localhost:5173).
 | `npm run typecheck` | Type-check only |
 | `npm run check` | Run every operation of every topic headlessly and verify the results |
 
-The build is a plain static site, so `dist/` can be hosted anywhere, e.g. GitHub Pages, Netlify or Vercel.
+The build is a plain static site with relative paths, so `dist/` can be hosted anywhere, including under a sub-folder.
+
+### Deploying to GitHub Pages
+
+The workflow in `.github/workflows/deploy.yml` checks, builds and deploys the site on every push to `main`. To turn it on, open the repository's **Settings → Pages** and set **Source** to **GitHub Actions**. The site is then published at `https://<your-username>.github.io/<repository-name>/`.
 
 ## Using it
 
